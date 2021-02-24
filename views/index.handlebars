@@ -4,27 +4,30 @@
     <img src="assets/images/likemeat-3sgNkN4wRWI-unsplash.jpg" class="rounded" style="width:100%; height:auto;" alt="Photo by LikeMeat on Unsplash">
   </div>
   <div class="col">
-    <h2>Add a Burger</h2>
+    <h2>State your kind of Burger?</h2>
     <form id="create-form">
       <div class="form-group">
-        <label for="ba">Burger Type:</label>
-        <input type="text" id="ba" name="name">
+        <label for="ca">Burger Type:</label>
+        <input type="text" id="ca" name="name">
       </div>
       <div class="form-group">
-        <label for="sleepy">Sleepy?</label><br>
+        {{!-- <label for="2BeEaten">2BeEaten?</label><br> --}}
+        {{!-- <input type="radio" name="2BeEaten" value="1" id="2BeEaten" checked> Sleepy!<br>
+        <input type="radio" name="sleepy" value="0" id="awake"> Awake --}}
       </div>
       <button type="submit" class="btn btn-outline-light">Add Burger</button>
     </form>
   </div>
 
+  <!-- Force next columns to break to new line -->
   <div class="w-100"></div>
 
   <div class="col">
     <h2>Burgers to be Devoured!</h2>
     <dl>
       {{#each burgers}}
-      {{#unless eaten}}
-      {{> burgers/burger-block eat=true}}
+      {{#unless sleepy}}
+      {{> burgers/burger-block sleep=true}}
       {{/unless}}
       {{/each}}
     </dl>
@@ -33,8 +36,8 @@
     <h2>Burgers that have been Devoured</h2>
     <dl>
       {{#each burgers}}
-      {{#if eaten}}
-      {{> burgers/burger-block eat=false}}
+      {{#if sleepy}}
+      {{> burgers/burger-block sleep=false}}
       {{/if}}
       {{/each}}
     </dl>

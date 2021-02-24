@@ -1,5 +1,6 @@
 const connection = require('./connection.js');
 
+// Helper function for SQL syntax to add question marks (?, ?, ?) in query
 const printQuestionMarks = (num) => {
   const arr = [];
 
@@ -64,7 +65,7 @@ const orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  // An example of objColVals would be {name: Hawaiian, sleepy: true}
   update(table, objColVals, condition, cb) {
     let queryString = `UPDATE ${table}`;
 
@@ -97,5 +98,4 @@ const orm = {
   },
 };
 
-// Export the orm object for the model (cat.js).
 module.exports = orm;
