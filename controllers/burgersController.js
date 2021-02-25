@@ -19,7 +19,8 @@ router.get('/', (req, res) => {
 router.get('/api/burgers', (req, res) => {
   burger.all((data) => {
     res.json(data)
-})
+  });
+});
 
 router.post('/api/burgers', (req, res) => {
   burger.create(['name', 'Sleepy'], [req.body.name, req.body.Sleepy], (result) => {
