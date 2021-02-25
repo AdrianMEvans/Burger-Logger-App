@@ -34,7 +34,7 @@ Enter the type of Burger. Burger is added to list of Burgers to be eaten. Two op
 * The app will store every burger in a database, whether devoured or not.
 
 ## Screenshot
-![Image of Game is Over screen](https://github.com/AdrianMEvans/JS_Code_Quiz/blob/main/assets/Kwiz_Game_Over.jpg?raw=true)
+![## Screenshot](https://github.com/AdrianMEvans/Burger-Logger-App/blob/main/Screen-Shot-2021-02-25-at-12.06.03-pm.jpg?raw=true)
 
 ## Contact :bellhop_bell:
 
