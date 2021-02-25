@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const newSleep = e.target.getAttribute('data-newsleep');
 
         const newSleepState = {
-          sleepy: newSleep,
+          Sleepy: newSleep,
         };
 
         

@@ -30,7 +30,7 @@ router.put('/api/burgers/:id', (req, res) => {
 
   burger.update(
     {
-      sleepy: req.body.sleepy,
+      Sleepy: req.body.Sleepy,
     },
     condition,
     (result) => {
