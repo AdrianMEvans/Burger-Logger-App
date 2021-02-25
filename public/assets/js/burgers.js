@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // UPDATE
-  const changeSleepBtns = document.querySelectorAll('.change-sleep');
+  const changeEatBtns = document.querySelectorAll('.change-eat');
 
   // Set up the event listener for the create button
-  if (changeSleepBtns) {
-    changeSleepBtns.forEach((button) => {
+  if (changeEatBtns) {
+    changeEatBtns.forEach((button) => {
       button.addEventListener('click', (e) => {
         // Grabs the id of the element that goes by the name, "id"
         const id = e.target.getAttribute('data-id');
-        const newSleep = e.target.getAttribute('data-newsleep');
+        const newEat = e.target.getAttribute('data-neweat');
 
-        const newSleepState = {
-          Sleepy: newSleep,
+        const newEatState = {
+          Eaten: newEat,
         };
 
         
@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
           },
 
           // make sure to serialize the JSON body
-          body: JSON.stringify(newSleepState),
+          body: JSON.stringify(newEatState),
         }).then((response) => {
           // Check that the response is all good
           // Reload the page so the user can see the new quote
           if (response.ok) {
-            console.log(`changed sleep to: ${newSleep}`);
+            console.log(`changed eat to: ${newEat}`);
             location.reload('/');
           } else {
             alert('something went wrong!');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       // Grabs the value of the textarea that goes by the name, "quote"
       const newBurger = {
         name: document.getElementById('ca').value.trim(),
-        // sleepy: document.getElementById('sleepy').checked,
+        // eaten: document.getElementById('eaten').checked,
       };
 
       // Send POST request to create a new quote

@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
         port: 3306,
         user: "root",
         password: 'Y3in@mysql',
-        database: "burger_db"
+        database: "myburger_db"
     });
 }
 

@@ -23,7 +23,7 @@ router.get('/api/burgers', (req, res) => {
 });
 
 router.post('/api/burgers', (req, res) => {
-  burger.create(['name', 'Sleepy'], [req.body.name, req.body.Sleepy], (result) => {
+  burger.create(['name', 'Eaten'], [req.body.name, req.body.Eaten], (result) => {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
@@ -36,7 +36,7 @@ router.put('/api/burgers/:id', (req, res) => {
 
   burger.update(
     {
-      Sleepy: req.body.Sleepy,
+      Eaten: req.body.Eaten,
     },
     condition,
     (result) => {

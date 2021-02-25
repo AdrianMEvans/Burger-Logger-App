@@ -11,9 +11,9 @@
         <input type="text" id="ca" name="name">
       </div>
       <div class="form-group">
-        {{!-- <label for="2BeEaten">2BeEaten?</label><br> --}}
-        {{!-- <input type="radio" name="2BeEaten" value="1" id="2BeEaten" checked> Sleepy!<br> --}}
-        {{!-- <input type="radio" name="sleepy" value="0" id="awake"> Awake --}}
+        {{!-- <label for="toBeEaten">toBeEaten?</label><br> --}}
+        {{!-- <input type="radio" name="toBeEaten" value="1" id="toBeEaten" checked> Eaten!<br> --}}
+        {{!-- <input type="radio" name="eaten" value="0" id="awake"> Awake --}}
       </div>
       <button type="submit" class="btn btn-outline-light">Add Burger</button>
     </form>
@@ -26,8 +26,8 @@
     <h2>Burgers to be Devoured!</h2>
     <dl>
       {{#each burgers}}
-      {{#unless sleepy}}
-      {{> burgers/burger-block sleep=true}}
+      {{#unless eaten}}
+      {{> burgers/burger-block eat=true}}
       {{/unless}}
       {{/each}}
     </dl>
@@ -36,8 +36,8 @@
     <h2>Burgers that have been Devoured</h2>
     <dl>
       {{#each burgers}}
-      {{#if sleepy}}
-      {{> burgers/burger-block sleep=false}}
+      {{#if eaten}}
+      {{> burgers/burger-block eat=false}}
       {{/if}}
       {{/each}}
     </dl>
